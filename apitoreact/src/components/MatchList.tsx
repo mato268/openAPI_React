@@ -17,8 +17,8 @@ export default function MatchList() {
       );
       const data1 = await response1.json();
       console.log(data1);
-      for (let index = 0; index < data1.length; index++) {
-        const response2 = await request("match-detail?matchid=" + data1[index]);
+      for (let list of data1) {
+        const response2 = await request("match-detail?matchid=" + list);
         const data2 = await response2.json();
         console.log(data2);
         return data2;
@@ -29,5 +29,6 @@ export default function MatchList() {
   }
 
   getMatchList();
+  
   return <h1>d</h1>;
 }
