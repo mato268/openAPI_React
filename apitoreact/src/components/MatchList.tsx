@@ -12,12 +12,14 @@ export default function MatchList() {
 
   async function getMatchList() {
     try {
+      // 모든 매치 기록 조회
       const response1 = await request(
         "match?matchtype=30&offset=0&limit=100&orderby=desc"
       );
       const data1 = await response1.json();
       console.log(data1);
       for (let list of data1) {
+        // 매치 상세 기록 조회
         const response2 = await request("match-detail?matchid=" + list);
         const data2 = await response2.json();
         console.log(data2);
