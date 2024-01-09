@@ -14,20 +14,21 @@ export default function CharacterList() {
           "apikey=aefc5f2cd24e5ccc94b27767e260b6d9"
         );
         const data1 = await response1.json();
-        const characters = data1.data.results
-        console.log(characters)
-        return characters;
+        console.log(data1);
+        return data1.data.results;;
       } catch (error) {
         console.error(error);
       }
     }
 
-    getCharacters().then(response => setCharacters(characters));
+    getCharacters().then(response => setCharacters(response));
   }, []);
 
   return (
     <ul>
-      <li></li>
+      {characters.map((character, index) => (
+        <li key={index}>{character.data}</li>
+      ))}
     </ul>
   );
 }
