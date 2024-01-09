@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function CharacterList() {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState<any[]>([]);
 
   function request(path: string) {
     return fetch(`https://gateway.marvel.com:443/v1/public/characters?${path}`);
