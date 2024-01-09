@@ -14,8 +14,9 @@ export default function CharacterList() {
           "apikey=aefc5f2cd24e5ccc94b27767e260b6d9"
         );
         const data1 = await response1.json();
-        console.log(data1);
-        return data1;
+        const characters = data1.data.results
+        console.log(characters)
+        return characters;
       } catch (error) {
         console.error(error);
       }
