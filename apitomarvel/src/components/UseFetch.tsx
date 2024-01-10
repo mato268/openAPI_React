@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function UseFetch() {
+export default function useFetch() {
   const [characters, setCharacters] = useState<any[]>([]);
   const [totalCount, setTotalCount] = useState(0);
 

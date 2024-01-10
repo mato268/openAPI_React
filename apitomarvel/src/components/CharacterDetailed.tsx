@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import UseFetch from "./UseFetch";
+import useFetch from "./UseFetch";
 import "./css/CharacterDetailed.css";
 
 export default function CharacterDetailed() {
-  const { characters } = UseFetch();
+  const { characters } = useFetch();
 
   const { id } = useParams();
   const characterList = characters.filter((itemid) => itemid.id === Number(id));
