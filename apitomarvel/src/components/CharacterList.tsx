@@ -29,7 +29,7 @@ export default function CharacterList() {
     <ul>
       {characters.map((item, id) => (
         <li key={id}>
-          <Link to={`/characterdetailed/${item.id}`}>캐릭터 이름 : {item.name}</Link>
+          <Link to={`/characterdetailed/${item.id}`}>이름 : {item.name}</Link>
         </li>
       ))}
     </ul>
