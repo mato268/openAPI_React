@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <h1>
       <Link to={"/"} style={{ textDecoration: "none" }}>
-        마블 캐릭터 조회
+        마블 캐릭터
       </Link>
     </h1>
   );
