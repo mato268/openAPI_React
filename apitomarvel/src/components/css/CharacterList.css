@@ -1,0 +1,14 @@
+li {
+  list-style: none;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+ul {
+  margin-top: -50px;
+  display: flex;
+  flex-wrap: wrap;
+}
