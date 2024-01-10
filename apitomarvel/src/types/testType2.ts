@@ -44,3 +44,5 @@ interface MarvelCharacterResponse {
     } & Collection;
   }[];
 }
+
+export {};
