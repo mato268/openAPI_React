@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import {Link} from "react-router-dom"
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState<any[]>([]);
@@ -15,7 +16,7 @@ export default function CharacterList() {
         );
         const data1 = await response1.json();
         console.log(data1);
-        return data1.data.results;;
+        return data1.data.results;
       } catch (error) {
         console.error(error);
       }
@@ -26,8 +27,10 @@ export default function CharacterList() {
 
   return (
     <ul>
-      {characters.map((item, index) => (
-        <li key={index}>캐릭터 이름 : {item.data}</li>
+      {characters.map((item, id) => (
+        <li key={id}>
+          <Link to={`/characterdetailed/${item.id}`}>캐릭터 이름 : {item.name}</Link>
+        </li>
       ))}
     </ul>
   );
