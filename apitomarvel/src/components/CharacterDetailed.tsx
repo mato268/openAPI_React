@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
-import "./css/CharacterDetailed.css"
+import "./css/CharacterDetailed.css";
 
 export default function CharacterDetailed() {
   const characters = UseFetch();
@@ -19,6 +19,10 @@ export default function CharacterDetailed() {
           {characterList.map((item, id) => (
             <tr key={id}>
               <td>ID : {item.id}</td>
+            </tr>
+          ))}
+          {characterList.map((item, id) => (
+            <tr key={id}>
               <td>이름 : {item.name}</td>
             </tr>
           ))}
