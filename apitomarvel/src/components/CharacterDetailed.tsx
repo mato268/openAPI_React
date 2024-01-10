@@ -34,12 +34,10 @@ export default function CharacterDetailed() {
       <table>
         <tbody>
           {CharacterList.map((item, id) => (
-            <>
               <tr key={id}>
-                <td>번호 : {item.id} </td>
-                <td>이름 : {item.name} </td>
+                <td>번호 : {item.id}</td>
+                <td>이름 : {item.name}</td>
               </tr>
-            </>
           ))}
         </tbody>
       </table>
