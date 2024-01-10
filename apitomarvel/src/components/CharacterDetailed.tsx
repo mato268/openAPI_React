@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import UseFetch from "./UseFetch";
+import "./css/CharacterDetailed.css"
 
 export default function CharacterDetailed() {
   const characters = UseFetch();
