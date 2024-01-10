@@ -26,8 +26,8 @@ export default function CharacterList() {
 
   return (
     <ul>
-      {characters.map((character, index) => (
-        <li key={index}>{character.data}</li>
+      {characters.map((item, index) => (
+        <li key={index}>{item.data}</li>
       ))}
     </ul>
   );
