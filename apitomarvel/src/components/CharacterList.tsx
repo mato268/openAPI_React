@@ -27,7 +27,7 @@ export default function CharacterList() {
   return (
     <ul>
       {characters.map((item, index) => (
-        <li key={index}>{item.data}</li>
+        <li key={index}>캐릭터 이름 : {item.data}</li>
       ))}
     </ul>
   );
