@@ -4,9 +4,8 @@ import UseFetch from "./UseFetch";
 export default function CharacterDetailed() {
   const characters = UseFetch();
 
-  const list = useParams().id;
-  console.log(list);
-  const characterList = characters.filter(itemid => itemid.id === Number(list));
+  const { id } = useParams();
+  const characterList = characters.filter(itemid => itemid.id === Number(id));
 
   if (characters.length === 0) {
     return <span>캐릭터 정보를 불러오는 중입니다...</span>;
@@ -18,7 +17,7 @@ export default function CharacterDetailed() {
         <tbody>
           {characterList.map((item, id) => (
             <tr key={id}>
-              <td>번호 : {item.id}</td>
+              <td>ID : {item.id}</td>
               <td>이름 : {item.name}</td>
             </tr>
           ))}
