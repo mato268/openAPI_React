@@ -1,3 +1,7 @@
+div {
+  float: right;
+}
+
 button {
-    float: right;
+  float: left;
 }
