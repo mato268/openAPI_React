@@ -1,7 +1,7 @@
 interface Marvel {
   name: string;
   id: number;
-  thumbnail: Img[];
+  thumbnail: Img;
 }
 
 interface Img {
