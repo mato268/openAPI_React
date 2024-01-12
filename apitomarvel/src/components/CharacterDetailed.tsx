@@ -1,33 +1,25 @@
-import { useParams } from "react-router-dom";
-import useFetch from "./UseFetch";
 import "./css/CharacterDetailed.css";
+import { useMarvelDetail } from "../query/useMarvelDetail";
 
 export default function CharacterDetailed() {
-  const { characters } = useFetch();
+  const { data, loading } = useMarvelDetail();
 
-  const { id } = useParams();
-  const characterList = characters.filter((itemid) => itemid.id === Number(id));
-
-  if (characters.length === 0) {
+  if (loading) {
     return <span>캐릭터 정보를 불러오는 중입니다...</span>;
   }
 
   return (
-    <>
-      <table>
-        <tbody>
-          {characterList.map((item, id) => (
-            <tr key={id}>
-              <td>ID : {item.id}</td>
-            </tr>
-          ))}
-          {characterList.map((item, id) => (
-            <tr key={id}>
-              <td>이름 : {item.name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </>
+    <main>
+      {data?.results.map((item) => (
+        <div key={item.id}>
+          <div>
+            <div>ID : {item.id}</div>
+          </div>
+          <div>
+            <div>이름 : {item.name}</div>
+          </div>
+        </div>
+      ))}
+    </main>
   );
 }

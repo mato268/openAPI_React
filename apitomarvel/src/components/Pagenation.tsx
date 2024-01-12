@@ -32,11 +32,7 @@ export const Pagenation = ({
   return (
     <div>
       <button onClick={() => onPageChange(1)}>{"<<"}</button>
-      <button
-        onClick={() => {
-          onPageChange(page - 5 <= 0 ? 1 : page - 5);
-        }}
-      >
+      <button onClick={() => onPageChange(page - 5 <= 0 ? 1 : page - 5)}>
         {"<"}
       </button>
       {getPageNumberList().map((item) => (
