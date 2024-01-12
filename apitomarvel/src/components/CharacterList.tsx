@@ -18,7 +18,7 @@ export default function CharacterList() {
       <ul>
         {data?.results.map(item => (
           <div key={item.id}>
-            <img src={item.thumbnail} alt="profile"/>
+            <img src={item.thumbnail.path} alt="profile"/>
             <li>
               <Link
                 to={`/characterdetailed/${item.id}`}
