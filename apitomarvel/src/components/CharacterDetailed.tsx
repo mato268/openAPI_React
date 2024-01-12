@@ -1,4 +1,4 @@
-import "./css/CharacterDetailed.css";
+import "./css/CharacterDetailed.module.css";
 import { useMarvelDetail } from "../query/useMarvelDetail";
 
 export default function CharacterDetailed() {
@@ -9,8 +9,8 @@ export default function CharacterDetailed() {
   }
 
   return (
-    <main>
-      {data?.results.map((item) => (
+    <div>
+      {data?.results.map(item => (
         <div key={item.id}>
           <div>
             <div>ID : {item.id}</div>
@@ -20,6 +20,6 @@ export default function CharacterDetailed() {
           </div>
         </div>
       ))}
-    </main>
+    </div>
   );
 }

@@ -1,3 +1,5 @@
+import "./css/Pagenation.module.css";
+
 interface PagenationProps {
   page: number;
   onPageChange: (page: number) => void;
