@@ -1,4 +1,4 @@
-h1 {
+.h1 {
   width: 200px;
   height: 100px;
   display: flex;
@@ -7,6 +7,6 @@ h1 {
   margin: 0 auto;
 }
 
-h1:hover {
+.h1:hover {
   background-color: black;
 }

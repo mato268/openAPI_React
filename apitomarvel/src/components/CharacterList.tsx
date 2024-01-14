@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./css/CharacterList.module.css";
+import ListStyles from "./css/CharacterList.module.css";
 import { Pagenation } from "./Pagenation";
 import { useMarvelList } from "../query/useMarvelList";
 
@@ -15,11 +15,11 @@ export default function CharacterList() {
 
   return (
     <>
-      <ul>
+      <ul className={ListStyles.ul}>
         {data?.results.map(item => (
           <div key={item.id}>
-            <img src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="profile"/>
-            <li>
+            <img className={ListStyles.img} src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="profile"/>
+            <li className={ListStyles.li}>
               <Link
                 to={`/characterdetailed/${item.id}`}
                 style={{ textDecoration: "none", color: "black" }}

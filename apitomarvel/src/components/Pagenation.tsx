@@ -1,4 +1,4 @@
-import "./css/Pagenation.module.css";
+import pagenationStyles from "./css/Pagenation.module.css";
 
 interface PagenationProps {
   page: number;
@@ -32,13 +32,19 @@ export const Pagenation = ({
   };
 
   return (
-    <div>
-      <button onClick={() => onPageChange(1)}>{"<<"}</button>
-      <button onClick={() => onPageChange(page - 5 <= 0 ? 1 : page - 5)}>
+    <div className={pagenationStyles.button_div}>
+      <button className={pagenationStyles.button} onClick={() => onPageChange(1)}>
+        {"<<"}
+      </button>
+      <button
+        className={pagenationStyles.button}
+        onClick={() => onPageChange(page - 5 <= 0 ? 1 : page - 5)}
+      >
         {"<"}
       </button>
-      {getPageNumberList().map((item) => (
+      {getPageNumberList().map(item => (
         <button
+          className={pagenationStyles.button}
           key={item}
           onClick={() => onPageChange(item < maxPage ? item : maxPage)}
         >
@@ -46,11 +52,14 @@ export const Pagenation = ({
         </button>
       ))}
       <button
+        className={pagenationStyles.button}
         onClick={() => onPageChange(page + 5 >= maxPage ? maxPage : page + 5)}
       >
         {">"}
       </button>
-      <button onClick={() => onPageChange(maxPage)}>{">>"}</button>
+      <button className={pagenationStyles.button} onClick={() => onPageChange(maxPage)}>
+        {">>"}
+      </button>
     </div>
   );
 };

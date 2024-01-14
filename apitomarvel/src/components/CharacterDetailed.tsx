@@ -1,4 +1,4 @@
-import "./css/CharacterDetailed.module.css";
+import detailStyles from "./css/CharacterDetailed.module.css";
 import { useMarvelDetail } from "../query/useMarvelDetail";
 
 export default function CharacterDetailed() {
@@ -9,9 +9,18 @@ export default function CharacterDetailed() {
   }
 
   return (
-    <div>
+    <div className={detailStyles.div}>
       {data?.results.map(item => (
         <div key={item.id}>
+          <div>
+            <div>
+              <img
+                className={detailStyles.img}
+                src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+                alt="profile"
+              />
+            </div>
+          </div>
           <div>
             <div>ID : {item.id}</div>
           </div>

@@ -1,6 +1,12 @@
-.asdf {
+.div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
+}
+
+.img {
   margin-top: 100px;
-  height: 100px;
-  width: 100px;
+  width: 200px;
+  height: 200px;
 }
