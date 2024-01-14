@@ -15,14 +15,13 @@ export default function MatchList() {
         "match?matchtype=30&offset=0&limit=100&orderby=desc"
       );
       const data1 = await response1.json();
-      console.log(data1);
       return data1;
     } catch (error) {
       console.error(error);
     }
   };
 
-  getMatchList()
+  getMatchList();
 
   return (
     <ul>

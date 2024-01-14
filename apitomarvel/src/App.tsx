@@ -6,11 +6,14 @@ import Header from "./components/Header";
 function App() {
   return (
     <BrowserRouter>
+      <Header />
       <main>
-        <Header />
         <Routes>
-        <Route path="/" element={<CharacterList />}></Route>
-        <Route path="/characterdetailed/:id" element={<CharacterDetailed />}></Route>
+          <Route path="/" element={<CharacterList />}></Route>
+          <Route
+            path="/characterdetailed/:id"
+            element={<CharacterDetailed />}
+          ></Route>
         </Routes>
       </main>
     </BrowserRouter>

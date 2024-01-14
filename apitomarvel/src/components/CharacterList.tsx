@@ -11,14 +11,16 @@ export default function CharacterList() {
     return <span>캐릭터 리스트를 불러오는 중입니다...</span>;
   }
 
-  console.log(data);
-
   return (
     <>
       <ul className={ListStyles.ul}>
-        {data?.results.map(item => (
+        {data?.results.map((item) => (
           <div key={item.id}>
-            <img className={ListStyles.img} src={`${item.thumbnail.path}.${item.thumbnail.extension}`} alt="profile"/>
+            <img
+              className={ListStyles.img}
+              src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+              alt="profile"
+            />
             <li className={ListStyles.li}>
               <Link
                 to={`/characterdetailed/${item.id}`}

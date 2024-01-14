@@ -10,23 +10,17 @@ export default function CharacterDetailed() {
 
   return (
     <div className={detailStyles.div}>
-      {data?.results.map(item => (
+      {data?.results.map((item) => (
         <div key={item.id}>
           <div>
-            <div>
-              <img
-                className={detailStyles.img}
-                src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
-                alt="profile"
-              />
-            </div>
+            <img
+              className={detailStyles.img}
+              src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
+              alt="profile"
+            />
           </div>
-          <div>
-            <div>ID : {item.id}</div>
-          </div>
-          <div>
-            <div>이름 : {item.name}</div>
-          </div>
+          <div>ID : {item.id}</div>
+          <div>이름 : {item.name}</div>
         </div>
       ))}
     </div>
